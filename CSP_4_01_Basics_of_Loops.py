@@ -47,13 +47,15 @@ def fizzBuzzContinuous(n):
             result += str(i) + " "
     return result.strip()
 def collatz(n):
+    result = ""
     while n != 1:
-        print(n, end=" ")
+        result += str(n) + " "
         if n % 2 == 0:
             n //= 2
         else:
             n = n * 3 + 1
-    print(1)
+    result += "1"  # add final number
+    return result
 def fibonacci(n):
     if n <= 0:
         return ""
@@ -67,6 +69,6 @@ print(backwards(5))
 print(reverse("Hello"))
 print(fizzBuzzContinuous(15))
 print(fibonacci(10))
-collatz(6)
-randomRepeating()
-randomRange(5)
+print(collatz(6))
+(randomRepeating())
+(randomRange(5))
